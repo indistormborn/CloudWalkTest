@@ -1,14 +1,13 @@
-import fs from 'fs'
+import fs from 'fs';
 
 export function openLogFile(path: string): string {
   if (fs.existsSync(path)) {
-    return fs.readFileSync(path, 'utf8')
+    return fs.readFileSync(path, 'utf8');
   } else {
-    throw new Error(`File ${path} does not exist`)
+    throw new Error(`File ${path} does not exist`);
   }
 }
 
 export function removeTimestampFromLog(text: string): string {
-  return text.replace(/^\s*\d{1,2}:\d{2}\s*/, '')
+  return text.replace(/^\s*\d{1,2}:\d{2}\s*/, '');
 }
-
