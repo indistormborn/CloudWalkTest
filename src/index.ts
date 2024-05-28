@@ -1,5 +1,5 @@
 import { GameLogParser } from './GameLogParser';
-import { GameReport } from './Report';
+import { GameReport } from './GameReport';
 
 const logPath = 'data/qgames.log';
 
