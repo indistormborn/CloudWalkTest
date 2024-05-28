@@ -6,9 +6,7 @@ export interface Kill {
   reason: string;
 }
 
-export interface Game {
-  [key: string]: Kill[];
-}
+export type Game = Kill[];
 
 export class GameLogParser {
   private readonly games: Game[];
@@ -54,7 +52,7 @@ export class GameLogParser {
           reason: this.getReason(cleanedLog),
         };
       });
-      structuredGames.push({ [`game_${i}`]: gameKills });
+      structuredGames.push(gameKills);
     }
     return structuredGames;
   }
