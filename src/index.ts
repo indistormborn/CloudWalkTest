@@ -1,6 +1,8 @@
 import { GameLogParser } from './GameLogParser';
+import { GameReport } from './Report';
 
 const logPath = 'data/qgames.log';
 
 const parser = new GameLogParser(logPath);
-console.log(JSON.stringify(parser.getGames()));
+const reporter = new GameReport(parser.getGames());
+console.log(JSON.stringify(reporter.playersAndKillPoints()));
