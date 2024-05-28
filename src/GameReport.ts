@@ -30,7 +30,7 @@ export class GameReport {
 
       report.push({
         totalKills: game.length,
-        players,
+        players: players.sort((a, b) => kills[b] - kills[a]), // sort players array by kills
         kills,
       });
     }
