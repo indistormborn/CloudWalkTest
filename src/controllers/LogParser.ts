@@ -1,4 +1,4 @@
-import { removeTimestampFromLog, openLogFile } from './utils';
+import { removeTimestampFromLog, openLogFile } from '../helpers/Utils';
 
 interface Kill {
   killer: string;
@@ -9,7 +9,7 @@ interface Kill {
 export type Game = Kill[];
 
 // todo pensar numa forma de configurar quais eventso do jogo vc quer, alem de kills, como alterações de user,e tc
-export class GameLogParser {
+export class LogParser {
   private readonly games: Game[];
   constructor(filePath: string) {
     const logFile = openLogFile(filePath);

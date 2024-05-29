@@ -1,6 +1,6 @@
-import { Game } from './GameLogParser';
-import { Report } from './entity/Report';
-import { IReport } from './model/IReport';
+import { Game } from './LogParser';
+import { Report } from '../entity/Report';
+import { IReport } from '../model/IReport';
 
 export class GameReport {
   private readonly games: Game[];

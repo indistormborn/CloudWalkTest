@@ -1,4 +1,4 @@
-import { Game } from '../GameLogParser';
+import { Game } from '../controllers/LogParser';
 import { IReport } from '../model/IReport';
 
 export class Report implements IReport {
