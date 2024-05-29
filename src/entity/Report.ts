@@ -36,12 +36,13 @@ export class Report implements IReport {
   }
 
   private getPlayersRank(): [string, number][] {
-    return Object.entries(this.players.reduce((acc: { [key: string]: number }, player: string) => {
-      const playerTotalKills = this.game.filter((kill) => kill.killer === player);
-      const playerWorldDeaths = this.game.filter((kill) => kill.victim === player && kill.killer === '<world>');
+    const playerScores: { [key: string]: number } = {};
 
-      acc[player] = playerTotalKills.length - playerWorldDeaths.length;
-      return acc;
-    }, {})).sort((a, b) => b[1] - a[1]);
+    this.game.forEach((kill) => {
+      if (kill.killer !== '<world>') return (playerScores[kill.killer] = (playerScores[kill.killer] || 0) + 1); // add to player's kills if killer is not <world>
+      if (kill.killer === '<world>') return (playerScores[kill.victim] = (playerScores[kill.victim] || 0) - 1); // subtract from player's kills if killer is <world>
+    });
+
+    return Object.entries(playerScores).sort((a, b) => b[1] - a[1]);
   }
 }
