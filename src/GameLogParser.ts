@@ -1,6 +1,6 @@
 import { removeTimestampFromLog, openLogFile } from './utils';
 
-export interface Kill {
+interface Kill {
   killer: string;
   victim: string;
   reason: string;
