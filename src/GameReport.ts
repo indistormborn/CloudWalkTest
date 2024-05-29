@@ -4,11 +4,11 @@ import { IReport } from './model/IReport';
 
 export class GameReport {
   private readonly games: Game[];
-  private readonly report: Report[]
+  private readonly report: Report[];
 
   constructor(games: Game[]) {
     this.games = games;
-    this.report = this.games.map((game) => new Report(game))
+    this.report = this.games.map((game) => new Report(game));
   }
 
   toJSON(): IReport[] {
@@ -18,5 +18,4 @@ export class GameReport {
   // toPlainText() {
 
   // }
-
 }
