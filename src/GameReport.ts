@@ -15,7 +15,12 @@ export class GameReport {
     return this.report.map((report) => report.toJSON());
   }
 
-  // toPlainText() {
-
-  // }
+  toPlainText(): string {
+    return this.report
+      .map(
+        (report, idx) => `------- Game ${idx} ------- 
+      ${report.toPlainText()}\n`,
+      )
+      .join('\n');
+  }
 }

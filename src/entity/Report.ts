@@ -22,6 +22,15 @@ export class Report implements IReport {
     };
   }
 
+  toPlainText(): string {
+    return `
+    Total kills: ${this.totalKills}
+    Players: ${this.players.map((player) => `\n    - ${player}`).join('')}
+    Kills: ${Object.entries(this.kills)
+      .map(([player, kills]) => `\n    * ${player}: ${kills} kills`)
+      .join('')}`;
+  }
+
   private getPlayers(): string[] {
     const playersSet = new Set(this.game.map((kill) => [kill.killer, kill.victim]).flat());
     playersSet.delete('<world>');
