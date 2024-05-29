@@ -6,12 +6,14 @@ export class Report implements IReport {
   readonly totalKills: number;
   readonly players: string[];
   readonly kills: { [key: string]: number };
+  readonly rank: [string, number][];
 
   constructor(game: Game) {
     this.game = game;
     this.totalKills = this.game.length;
     this.players = this.getPlayers();
     this.kills = this.getPlayerKills();
+    this.rank = this.rankPlayers();
   }
 
   toJSON(): IReport {
@@ -19,6 +21,7 @@ export class Report implements IReport {
       totalKills: this.totalKills,
       players: this.players,
       kills: this.kills,
+      rank: this.rank,
     };
   }
 
@@ -28,7 +31,8 @@ export class Report implements IReport {
     Players: ${this.players.map((player) => `\n    - ${player}`).join('')}
     Kills: ${Object.entries(this.kills)
       .map(([player, kills]) => `\n    * ${player}: ${kills} kills`)
-      .join('')}`;
+      .join('')}
+    Rank: ${this.rank.map(([player, kills]) => `\n    - ${player}: ${kills} kills`).join('')}`;
   }
 
   private getPlayers(): string[] {
@@ -45,5 +49,10 @@ export class Report implements IReport {
       acc[player] = playerTotalKills.length - playerWorldDeaths.length;
       return acc;
     }, {});
+  }
+
+  private rankPlayers(): [string, number][] {
+    const playersAndKills = Object.entries(this.kills);
+    return playersAndKills.sort((a, b) => b[1] - a[1]);
   }
 }

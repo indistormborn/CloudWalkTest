@@ -4,4 +4,5 @@ export interface IReport {
   kills: {
     [key: string]: number;
   };
+  rank: [string, number][];
 }

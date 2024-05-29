@@ -8,6 +8,7 @@ interface Kill {
 
 export type Game = Kill[];
 
+// todo pensar numa forma de configurar quais eventso do jogo vc quer, alem de kills, como alterações de user,e tc
 export class GameLogParser {
   private readonly games: Game[];
   constructor(filePath: string) {
