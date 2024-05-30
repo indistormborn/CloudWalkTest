@@ -16,7 +16,7 @@ export class GameReport {
 
   toJSON(): IReport[] {
     if (!this.jsonReport) this.jsonReport = this.report.map((report) => report.toJSON());
-    return this.jsonReport
+    return this.jsonReport;
   }
 
   toPlainText(): string {
@@ -28,7 +28,7 @@ export class GameReport {
         )
         .join('\n');
     }
-    return this.textReport
+    return this.textReport;
   }
 
   saveJSON(): void {
@@ -42,5 +42,4 @@ export class GameReport {
     if (this.textReport) return saveText(this.textReport, name);
     saveText(this.toPlainText(), name);
   }
-
 }

@@ -3,7 +3,7 @@ import { LogParser } from './controllers/LogParser';
 import { GameReport } from './controllers/GameReport';
 import { existsSync } from 'fs';
 
-(async () => {
+async function cli() {
   const filePath = await input({
     message: 'Add file path to parse',
     validate: (value) => {
@@ -44,7 +44,7 @@ import { existsSync } from 'fs';
         value: 'Yes',
       },
       {
-        value: 'Exit',
+        value: 'No',
       },
     ],
   });
@@ -52,7 +52,22 @@ import { existsSync } from 'fs';
   if (saveItOrNot === 'Yes') {
     if (outputFormat === 'JSON') console.log(reporter.saveJSON());
     if (outputFormat === 'Text') console.log(reporter.savePlainText());
-  } else {
-    process.exit(0)
   }
-})();
+
+  const processNewFile = await select({
+    message: 'Do you want to process another file?',
+    choices: [
+      {
+        value: 'Yes',
+      },
+      {
+        value: 'Exit',
+      },
+    ],
+  });
+
+  if (processNewFile === 'Yes') return cli();
+  return process.exit(0);
+}
+
+cli();
