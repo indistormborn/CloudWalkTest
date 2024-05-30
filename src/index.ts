@@ -36,4 +36,23 @@ import { existsSync } from 'fs';
 
   if (outputFormat === 'JSON') console.log(reporter.toJSON());
   if (outputFormat === 'Text') console.log(reporter.toPlainText());
+
+  const saveItOrNot = await select({
+    message: 'Would like to save the output to a file?',
+    choices: [
+      {
+        value: 'Yes',
+      },
+      {
+        value: 'Exit',
+      },
+    ],
+  });
+
+  if (saveItOrNot === 'Yes') {
+    if (outputFormat === 'JSON') console.log(reporter.saveJSON());
+    if (outputFormat === 'Text') console.log(reporter.savePlainText());
+  } else {
+    process.exit(0)
+  }
 })();

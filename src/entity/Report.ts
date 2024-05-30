@@ -3,7 +3,7 @@ import { IReport } from '../model/IReport';
 
 export class Report implements IReport {
   private readonly game: Game;
-  private plainTextReport: string;
+  private plainTextReport?: string;
   readonly totalKills: number;
   readonly players: string[];
   readonly rank: [string, number][];
