@@ -3,6 +3,7 @@ import { IReport } from '../model/IReport';
 
 export class Report implements IReport {
   private readonly game: Game;
+  private plainTextReport: string;
   readonly totalKills: number;
   readonly players: string[];
   readonly rank: [string, number][];
@@ -23,10 +24,14 @@ export class Report implements IReport {
   }
 
   toPlainText(): string {
-    return `
+    if (!this.plainTextReport) {
+      this.plainTextReport = `
     Total kills: ${this.totalKills}
     Players: ${this.players.map((player) => `\n    - ${player}`).join('')}
     Rank: ${this.rank.map(([player, kills]) => `\n    - ${player}: ${kills} kills`).join('')}`;
+    }
+
+    return this.plainTextReport;
   }
 
   private getPlayers(): string[] {
