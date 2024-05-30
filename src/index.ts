@@ -12,11 +12,18 @@ import { existsSync } from 'fs';
     },
   });
 
-  const parser = new LogParser(filePath);
+  let parser: LogParser;
+
+  try {
+    parser = new LogParser(filePath);
+  } catch (error) {
+    return console.error('Unable to parse input file. Check file and try again.');
+  }
+
   const reporter = new GameReport(parser.getGames());
 
   const outputFormat = await select({
-    message: 'Would you link the output in which format?',
+    message: 'Select the output format for the report',
     choices: [
       {
         value: 'JSON',
