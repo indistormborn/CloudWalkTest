@@ -8,7 +8,7 @@ async function cli() {
     message: 'Add file path to parse',
     validate: (value) => {
       if (existsSync(value)) return true;
-      return `Caminho do arquivo inválido, o arquivo não existe`;
+      return `File path is invalid, file doesn't exist.`;
     },
   });
 
