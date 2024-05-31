@@ -1,1 +1,18 @@
-[{"totalKills":11,"players":["Isgalamido","Mocinha"],"rank":[["Isgalamido",-5]],"deathCauses":{"MOD_TRIGGER_HURT":7,"MOD_ROCKET_SPLASH":3,"MOD_FALLING":1}},{"totalKills":4,"players":["Isgalamido","Mocinha","Zeh","Dono da Bola"],"rank":[["Isgalamido",1],["Dono da Bola",-1],["Zeh",-2]],"deathCauses":{"MOD_ROCKET":1,"MOD_TRIGGER_HURT":2,"MOD_FALLING":1}}]
+[
+  {
+    "totalKills": 11,
+    "players": ["Isgalamido", "Mocinha"],
+    "rank": [["Isgalamido", -5]],
+    "deathCauses": { "MOD_TRIGGER_HURT": 7, "MOD_ROCKET_SPLASH": 3, "MOD_FALLING": 1 }
+  },
+  {
+    "totalKills": 4,
+    "players": ["Isgalamido", "Mocinha", "Zeh", "Dono da Bola"],
+    "rank": [
+      ["Isgalamido", 1],
+      ["Dono da Bola", -1],
+      ["Zeh", -2]
+    ],
+    "deathCauses": { "MOD_ROCKET": 1, "MOD_TRIGGER_HURT": 2, "MOD_FALLING": 1 }
+  }
+]
