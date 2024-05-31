@@ -1,0 +1,81 @@
+[
+  [
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "Isgalamido",
+      "victim": "Mocinha",
+      "reason": "MOD_ROCKET_SPLASH"
+    },
+    {
+      "killer": "Isgalamido",
+      "victim": "Isgalamido",
+      "reason": "MOD_ROCKET_SPLASH"
+    },
+    {
+      "killer": "Isgalamido",
+      "victim": "Isgalamido",
+      "reason": "MOD_ROCKET_SPLASH"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_FALLING"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Isgalamido",
+      "reason": "MOD_TRIGGER_HURT"
+    }
+  ],
+  [
+    {
+      "killer": "Isgalamido",
+      "victim": "Mocinha",
+      "reason": "MOD_ROCKET"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Zeh",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Zeh",
+      "reason": "MOD_TRIGGER_HURT"
+    },
+    {
+      "killer": "<world>",
+      "victim": "Dono da Bola",
+      "reason": "MOD_FALLING"
+    }
+  ]
+]

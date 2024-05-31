@@ -1,0 +1,29 @@
+------- Game 1 ------- 
+      
+    Total kills: 11
+    Players: 
+    - Isgalamido
+    - Mocinha
+    Rank: 
+    - Isgalamido: -5 kills
+    Death causes: 
+    - MOD_TRIGGER_HURT: 7 times
+    - MOD_ROCKET_SPLASH: 3 times
+    - MOD_FALLING: 1 times
+
+------- Game 2 ------- 
+      
+    Total kills: 4
+    Players: 
+    - Isgalamido
+    - Mocinha
+    - Zeh
+    - Dono da Bola
+    Rank: 
+    - Isgalamido: 1 kills
+    - Dono da Bola: -1 kills
+    - Zeh: -2 kills
+    Death causes: 
+    - MOD_ROCKET: 1 times
+    - MOD_TRIGGER_HURT: 2 times
+    - MOD_FALLING: 1 times
